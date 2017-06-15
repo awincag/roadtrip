@@ -1,0 +1,60 @@
+<div class="content home-padding flex flex-horizontal-center">
+
+  <section id="city">
+    <div class="city--content">
+      <div class="city--main">
+        <div class="city--title">
+          <span class="h1 caps main">{{ page.city }}, {{ page.state }}</span>
+        </div>
+        <div class="city--image">
+          <img src="../assets/media/{{ page.city }}.jpg" alt="Image of {{ page.city}}">
+        </div>
+      </div>
+      <div class="city--details">
+        <div class="city--details-title">
+          <span class="h2">Details so far:</span>
+        </div>
+        <div class="city--details-list">
+          {% for item in page.details %}
+            <div class="intro-details-2">
+              <span class="header-label">{{ item.label}}</span>
+              <div class="details-item">
+                <p>{{ item.content}}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="city-break-container">
+    <div class="city-break"></div>
+  </div>
+
+  <section id="questions">
+    <div class="questions--content">
+      <div class="questions--content-title">
+        <span class="h2">Suggest me some shit!</span>
+        <p style="margin: 0;">Everything is optional cos anything is better than nothing</p>
+      </div>
+      <div class="questions--content-main">
+        <form action="https://formspree.io/alex.cagwin+{{ page.city }}@gmail.com"
+              method="POST">
+              <span class="form-label">My tummy leads the way:</span>
+              <textarea type="text" name="name" placeholder="Where should I eat?" class="input"/></textarea>
+              <p class="form-extra">If you want to be extra, add some links :D</p>
+              <span class="form-label">What else should I know? Neighrboods to stay in, places to visit, things to take photos of, etc.</span>
+              <textarea type="text" name="name" placeholder="Give me all the deets" class="input"/></textarea>
+              <p class="form-extra">If you want to be extra, add some links :D</p>
+              <span class="form-label">Who can I thank for this?</span>
+              <input type="text" name="name" placeholder="Let me buy you a drink as thanks" class="input"/>
+              <input type="hidden" name="_subject" value="{{ page.city }} Suggestions"/>
+              <input type="hidden" name="_next" value="../thanks">
+              <input type="submit" value="Let's get spicy!!" class="sp-btn trns">
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>

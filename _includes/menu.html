@@ -1,0 +1,32 @@
+<div id="menu" class="mobile-menu">
+  <div class="mobile-menu-content">
+    <div class="menu-header">
+      <span class="mobile-menu-title">Alex Cagwin</span>
+    </div>
+    <div class="menu-links">
+      {% for item in page.menu %}
+        {% if item.title == page.project %}
+        <div class="link-item">
+            <a href="/{{ item.link }}" title="{{ item.title }}">
+              <span class="menu-item-link main">{{ item.title }}</span>
+              <span class="menu-item-active">&nbsp;— Currently Viewing</span>
+            </a>
+        </div>
+        {% else %}
+          <div class="link-item">
+              <a href="/{{ item.link }}" title="{{ item.title }}">
+                <span class="menu-item-link">{{ item.title }}</span>
+              </a>
+          </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+    <div class="menu-contact">
+      <span class="menu-contact-label">Contact</span>
+      <a href="mailto:hey@acag.win" class="menu-contact-email">
+        <span>hey@acag.win</span>
+      </a>
+    </div>
+  </div>
+</div>
