@@ -459,7 +459,7 @@ img {
   border-bottom: 1px solid #8EDDB9; }
   @media only screen and (min-width: 1000px) {
     .calendar--header-content {
-      padding: 80px 0 0;
+      padding: 40px 0 0;
     }
   }
   @media only screen and (min-width: 2000px) {
@@ -515,10 +515,6 @@ a:hover.dates--list-item, a:hover.dates--list-item .month-day, a:hover.dates--li
   .dates--list-item:not(:nth-child(7n)) {
     border-right: 1px solid #8EDDB9;
   }
-}
-
-.header--title {
-  padding: .75em 0;
 }
 
 .header-title-item {
