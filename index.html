@@ -532,21 +532,9 @@ october:
     <div id="main" class="content home-padding flex flex-horizontal-center">
       <div id="header" class="nav-2 header animated header--fixed">
         <div class="nav--content">
-          <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">
-            <i class="fa fa-linkedin"></i>
-            <span class="nav-tooltip">Connect with Me</span>
-          </a>
-          <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">
-            <i class="fa fa-twitter"></i>
-            <span class="nav-tooltip">Follow Me</span>
-          </a>
-          <a href="mailto:hey@acag.win" class="desktop-hide">
-            <i class="fa fa-envelope-o"></i>
-          </a>
-          <a data-clipboard-text="hey@acag.win" class="no-smoothState copied mobile-hide">
-            <i class="fa fa-envelope-o"></i>
-            <span class="nav-tooltip">Shoot Me an Email</span>
-          </a>
+          <a id="cities-nav" href="#" data-modal="cities">All Cities</a>
+          <a id="about-nav" href="#" data-modal="about">About The Trip</a>
+          <!-- <a id="suggest-nav" href="#" data-modal="suggest">Suggest A Stop</a> -->
         </div>
       </div>
 
@@ -935,7 +923,9 @@ october:
         <div class="about">
           <div class="about--content">
             <div class="about--header">
-
+              <div id="about-close" class="about-close">
+                <a href="#" class="close-text">Close</a>
+              </div>
             </div>
             <div class="about--hero">
               <div class="hero--content">
@@ -983,6 +973,9 @@ october:
       <div id="cities" class="all-cities">
         <div class="cities">
           <div class="cities--content">
+            <div id="cities-close" class="cities-close">
+              <a href="#" class="close-text">Close</a>
+            </div>
             <div class="cities--title">
               <span class="cities--header h1 main">All Cities</span>
             </div>

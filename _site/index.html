@@ -3,21 +3,21 @@
 
       <title>A Little Roadtrip to New York</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="title" content="Alex Cagwin | Product Designer">
-<meta name="description" content="Alex Cagwin is a Digital Product Designer and Co-Creator of the World's Best Breakfast Tacos">
+<meta name="title" content="A little roadtrip to New York | Alex Cagiwn">
+<meta name="description" content="Suggest me some stops on my roadtrip from San Francisco to New York">
 <meta name="keywords" content="Product, Design, Designer, Full-Stack, Alex, Cagwin, Breakfast Taco, Alex Cagwin, Worlds Best Tacos">
 <meta name="author" content="Alex Cagwin">
-<meta property="og:title" content="Alex Cagwin | Digital Product Designer">
+<meta property="og:title" content="A little roadtrip to New York | Alex Cagiwn">
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://acag.win">
-<meta property="og:image" content="awincag.github.io/media/meta-image.png" />
-<meta property="og:description" content="Digital Product Designer &amp; Co-creator of World's Best Breakfast Tacos">
+<meta property="og:image" content="awincag.github.io/media/roadtrip-image.png" />
+<meta property="og:description" content="Suggest me some stops on my roadtrip from San Francisco to New York">
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@awincag" />
-<meta name="twitter:title" content="Alex Cagwin | Product Designer." />
-<meta name="twitter:description" content="Digital Product Designer &amp; Co-createor of World's Best Breakfast Tacos" />
-<meta name="twitter:image" content="awincag.github.io/media/meta-image.png" />
+<meta name="twitter:title" content="A little roadtrip to New York | Alex Cagiwn" />
+<meta name="twitter:description" content="Suggest me some stops on my roadtrip from San Francisco to New York" />
+<meta name="twitter:image" content="awincag.github.io/media/roadtrip-image.png" />
 
 <link rel="shortcut icon" href="/img/favicon.png">
 <link rel="icon" type="image" href="/img/favicon.png">
@@ -48,21 +48,9 @@
     <div id="main" class="content home-padding flex flex-horizontal-center">
       <div id="header" class="nav-2 header animated header--fixed">
         <div class="nav--content">
-          <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">
-            <i class="fa fa-linkedin"></i>
-            <span class="nav-tooltip">Connect with Me</span>
-          </a>
-          <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">
-            <i class="fa fa-twitter"></i>
-            <span class="nav-tooltip">Follow Me</span>
-          </a>
-          <a href="mailto:hey@acag.win" class="desktop-hide">
-            <i class="fa fa-envelope-o"></i>
-          </a>
-          <a data-clipboard-text="hey@acag.win" class="no-smoothState copied mobile-hide">
-            <i class="fa fa-envelope-o"></i>
-            <span class="nav-tooltip">Shoot Me an Email</span>
-          </a>
+          <a id="cities-nav" href="#" data-modal="cities">All Cities</a>
+          <a id="about-nav" href="#" data-modal="about">About The Trip</a>
+          <!-- <a id="suggest-nav" href="#" data-modal="suggest">Suggest A Stop</a> -->
         </div>
       </div>
 
@@ -2181,7 +2169,9 @@
         <div class="about">
           <div class="about--content">
             <div class="about--header">
-
+              <div id="about-close" class="about-close">
+                <a href="#" class="close-text">Close</a>
+              </div>
             </div>
             <div class="about--hero">
               <div class="hero--content">
@@ -2229,6 +2219,9 @@
       <div id="cities" class="all-cities">
         <div class="cities">
           <div class="cities--content">
+            <div id="cities-close" class="cities-close">
+              <a href="#" class="close-text">Close</a>
+            </div>
             <div class="cities--title">
               <span class="cities--header h1 main">All Cities</span>
             </div>
@@ -2348,11 +2341,7 @@
 
     <script src="../assets/js/headroom.min.js"></script>
 <script src="../assets/js/jquery-2.1.1.js"></script>
-<script src="../assets/js/smooth-scroll.min.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>
-  smoothScroll.init();
-</script>
 <script>
   (function() {
     var header = new Headroom(document.querySelector("#header"), {
@@ -2368,6 +2357,34 @@
 
 }());
 </script>
+<!-- <script>
+    function wireUpElements() {
+      var elements = document.querySelectorAll('[data-modal]');
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+
+        element.onclick = function () {
+          var targetId = element.dataset.modal;
+          var target = document.getElementById(targetId);
+
+          // If you want to toggle the class when clicking use this:
+          if (target.classList.contains('modal')) {
+            target.classList.remove('modal');
+          } else {
+            target.classList.add('modal');
+          }
+
+          // If you only want to add the class on click use this
+          // and comment out the above if-else chunk:
+          // target.classList.add('active');
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      wireUpElements();
+    });
+</script> -->
 
 
   </body>

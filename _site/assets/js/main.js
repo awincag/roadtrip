@@ -4,9 +4,6 @@ var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
 
 
-
-
-
 var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
 var close = document.getElementsByClassName("closebtn");
@@ -27,16 +24,40 @@ for (i = 0; i < close.length; i++) {
 };
 
 var body = document.body;
-var menuButton = document.getElementById('menu-nav');
-var menu = document.getElementById('menu');
-var content = document.getElementById('content');
+var citiesbutton = document.getElementById('cities-nav');
+var cities = document.getElementById('cities');
+var citiesclose = document.getElementById('cities-close');
 
-// menuButton.addEventListener('click', function (e) {
-//     menu.classList.add('active');
-//     body.classList.add('body-height-fixed');
-//     e.preventDefault();
-// });
-//
+  citiesbutton.addEventListener('click', function (e) {
+     cities.classList.add('modal');
+     body.classList.add('body-height-fixed');
+     e.preventDefault();
+});
+
+  citiesclose.addEventListener('click', function (e) {
+    cities.classList.remove('modal');
+    body.classList.remove('body-height-fixed');
+    e.preventDefault();
+  });
+
+
+
+var aboutbutton = document.getElementById('about-nav');
+var about = document.getElementById('about');
+var aboutclose = document.getElementById('about-close');
+
+ aboutbutton.addEventListener('click', function (e) {
+     about.classList.add('modal');
+     body.classList.add('body-height-fixed');
+     e.preventDefault();
+});
+
+  aboutclose.addEventListener('click', function (e) {
+    about.classList.remove('modal');
+    body.classList.remove('body-height-fixed');
+    e.preventDefault();
+  });
+
 
 
 // var page = document.getElementById('page-transition');
@@ -66,7 +87,7 @@ $(document).ready(function() {
     var firstMonth = months[1];
     var lastMonth = months[4];
 
-    if (window.pageYOffset >= firstMonth.offsetTop && window.pageYOffset <= lastMonth.offsetTop ) {
+    if (window.pageYOffset >= firstMonth.offsetTop && window.pageYOffset <= lastMonth.offsetTop + 800 ) {
       $(staticTitle).addClass("active");
       $(jump).addClass("active");
     } else {

@@ -1,10 +1,6 @@
 <script src="../assets/js/headroom.min.js"></script>
 <script src="../assets/js/jquery-2.1.1.js"></script>
-<script src="../assets/js/smooth-scroll.min.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>
-  smoothScroll.init();
-</script>
 <script>
   (function() {
     var header = new Headroom(document.querySelector("#header"), {
@@ -20,3 +16,31 @@
 
 }());
 </script>
+<!-- <script>
+    function wireUpElements() {
+      var elements = document.querySelectorAll('[data-modal]');
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+
+        element.onclick = function () {
+          var targetId = element.dataset.modal;
+          var target = document.getElementById(targetId);
+
+          // If you want to toggle the class when clicking use this:
+          if (target.classList.contains('modal')) {
+            target.classList.remove('modal');
+          } else {
+            target.classList.add('modal');
+          }
+
+          // If you only want to add the class on click use this
+          // and comment out the above if-else chunk:
+          // target.classList.add('active');
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      wireUpElements();
+    });
+</script> -->

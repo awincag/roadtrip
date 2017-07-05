@@ -386,7 +386,7 @@ img {
 
 .calendar--jump.active .jump--content {
   position: fixed;
-  top: 80px;
+  top: 38px;
 }
 
 .calendar--jump a {
@@ -452,14 +452,14 @@ img {
 .calendar--header-content {
   max-width: 1400px;
   display: flex;
-  padding: 8px 25px 0;
+  padding: 12px 25px 10px;
   justify-content: center;
   flex-direction: column;
   background-color: #32B67A;
   border-bottom: 1px solid #8EDDB9; }
   @media only screen and (min-width: 1000px) {
     .calendar--header-content {
-      padding: 80px 0 0;
+      padding: 40px 0 0;
     }
   }
   @media only screen and (min-width: 2000px) {
@@ -517,10 +517,6 @@ a:hover.dates--list-item, a:hover.dates--list-item .month-day, a:hover.dates--li
   }
 }
 
-.header--title {
-  padding: .75em 0;
-}
-
 .header-title-item {
   font-family: 'Sailec-regular';
   font-size: 1.5rem;
@@ -564,7 +560,7 @@ a:hover.dates--list-item, a:hover.dates--list-item .month-day, a:hover.dates--li
   flex-direction: column-reverse;
   justify-content: space-between;
   position: relative;
-  padding: 1.5em 1em;
+  padding: 1.5em 0em;
   border-top: 1px solid #8EDDB9; }
   @media only screen and (min-width: 1000px) {
     .dates--list-item {
@@ -693,7 +689,7 @@ a:hover.dates--list-item, a:hover.dates--list-item .month-day, a:hover.dates--li
       right: 1em;
       top: 1em;
       bottom: auto;
-      left: auto;
+      left: 1em;
     }
   }
 
@@ -729,9 +725,14 @@ a:hover.dates--list-item, a:hover.dates--list-item .month-day, a:hover.dates--li
     .nav--content {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: flex-end;
+              justify-content: flex-end;
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: flex-end;
+              align-items: flex-end;
     }
   }
 
@@ -757,24 +758,24 @@ a:hover.dates--list-item, a:hover.dates--list-item .month-day, a:hover.dates--li
       -ms-flex: 1;
           flex: 1;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 1rem; }
   @media only screen and (min-width: 1000px) {
     .nav--content a {
-      background-color: rgba(0,0,0,0.3);
+      -webkit-box-flex: none;
+      -webkit-flex: none;
+          -ms-flex: none;
+              flex: none;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 48px;
-      height: 48px;
-      margin: 2px 0;
       transition: .2s ease-out;
+      padding: 0 1em 0 0;
     }
     #header .nav--content a {
       color: #fff;
     }
     #header .nav--content a:hover {
-      color: #fff !important;
-      background-color: rgba(0,0,0,0.6);
+      color: #d2d2d2 !important;
     }
     .nav--content a.close-button {
       padding: 0 0 1em 0;
@@ -962,8 +963,13 @@ html{
 
 
 
+.cities-close, .about-close {
+  text-align: right;
+}
 
-
+.cities-close a:hover, .about-close a:hover  {
+  color: #666;
+}
 
 
 
@@ -1249,7 +1255,9 @@ form {
 }
 
 .stats-item {
+  flex: 1;
   display: flex;
+  align-items: center;
   flex-direction: column;
   margin: 0 0 2em 0;
 }
@@ -1263,7 +1271,7 @@ form {
   margin: 2em 0 3em 0;
 }
 
-.all-cities.active, .about-trip.active {
+.all-cities.modal, .about-trip.modal {
   background-color: #fff;
   display: flex;
   position: fixed;
@@ -1357,6 +1365,10 @@ form {
   padding: 0 0 0 1em;
 }
 
+.hero--stats {
+  display: flex;
+  width: 100%;
+}
 
 .about--main, .hero--stats {
   position: relative;
